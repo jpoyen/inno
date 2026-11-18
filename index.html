@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nursing Innovation Excellence — ระบบนวัตกรรมทางการพยาบาล</title>
+<script>
+  window.addEventListener('message', function (e) {
+    if (!/^https:\/\/[a-z0-9-]+-script\.googleusercontent\.com$/i.test(e.origin)) return;
+    if (e.data && e.data.type === 'sdi-hello' && e.source) {
+      e.source.postMessage({ type: 'sdi-ok' }, e.origin);
+    }
+  });
+</script>
+<style>
+  html, body { margin: 0; height: 100%; background: #0f1115; overflow: hidden; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+  #loading { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px; background: #0f1115; color: #d9b45a; font: 15px/1.5 "Sarabun", "Noto Sans Thai", system-ui, sans-serif;
+    z-index: 2; transition: opacity .35s; }
+  #loading.hide { opacity: 0; pointer-events: none; }
+  .spin { width: 38px; height: 38px; border: 3px solid rgba(217,180,90,.25); border-top-color: #d9b45a; border-radius: 50%;
+    animation: r 0.9s linear infinite; }
+  @keyframes r { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div id="loading"><div class="spin"></div><div>กำลังโหลดระบบนวัตกรรม…</div></div>
+<script>
+  (function () {
+    var p = [
+      "jVGel9yZfFUa1o2Uwc3NplDO",
+      "BlnNxlzNohzVtJ1a25kWGllY",
+      "YRTcDRjZshVN31CWUdzNBllM",
+      "2VWMyVESwNUYWt0Y5MnUVNWU",
+      "4J2Y5Z2SB9ycvM3byNWYt9Sb",
+      "vNmLlx2Zv92ZuQHcpJ3Yz9yL",
+      "6MHc0RHa"
+    ];
+    var f = document.createElement('iframe');
+    f.id = 'app-frame';
+    f.title = 'Nursing Innovation Excellence';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allow = 'clipboard-write';
+    f.onload = function () { var l = document.getElementById('loading'); if (l) l.classList.add('hide'); };
+    f.src = atob(p.join('').split('').reverse().join(''));
+    document.body.appendChild(f);
+  })();
+</script>
+</body>
+</html>
